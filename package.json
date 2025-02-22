@@ -1,0 +1,15 @@
+{
+  "name": "percy-java-demo",
+  "version": "1.0.0",
+  "description": "Percy Basics",
+  "scripts": {
+    "percy": "percy exec --verbose -- mvn -Dtest=PercyManualTest test",
+    "percy.3d": "percy exec --verbose -- mvn -Dtest=PercyManual3DTest test",
+    "percy.docs": "percy exec --verbose -- mvn -Dtest=PercyManual2Test test",
+    "percy.dev": "export PERCY_BRANCH=develop && percy exec -- mvn -P manual test",
+    "percy.local": "percy exec --verbose -- mvn -Dtest=LocalWebTest test"
+  },
+  "dependencies": {
+    "@percy/cli": "^1.29.1"
+  }
+}
